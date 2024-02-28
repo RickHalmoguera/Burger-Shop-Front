@@ -9,11 +9,11 @@ html {
   font-size: 10px;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6, span {
   font-family: "Dancing Script", cursive;
 }
 
-p, span, button {
+p, button {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -22,6 +22,7 @@ p, span, button {
   width: 100%;
   position: fixed;
   z-index: 9;
+  background-image: url("/images/menu-bg.jpg");
 }
 .nav__container {
   display: flex;
@@ -128,4 +129,53 @@ p, span, button {
   background-color: #ffbe33;
   width: 20px;
   height: 20px;
+}
+
+.section-promotions {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.section-promotions__card {
+  background-color: #222831;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  min-height: 215px;
+  padding: 2em;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  color: #ffffff;
+}
+.card__container--img {
+  width: 165px;
+  height: 100%;
+  border: 2px solid #ffbe33;
+  border-radius: 50%;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card__h5 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.card__span {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.card__h6 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */

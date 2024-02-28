@@ -4,69 +4,62 @@
 @import "variables.scss";
 @import "nav.scss";
 @import "button.scss";
+@import "section-hero.scss";
 
 
-.section-hero{
+.section-promotions{
     @include section();
-    width: 100%;
-    height: 100svh;
-    background-image: url("/images/hero-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 1em;
 
-    &__swiper{
-        position: relative;
-        height: 100%;
+    &__card{
+        background-color: $color-bg-main;
         display: flex;
-        align-items: center;  
-        
-        &__wrapper{
-          height: 30%;
-
-        }
-        &__h1{
-            font-size: 5.6rem;
-            font-weight: 700;
-            color: $color-font-white;
-            margin-bottom: 1.3rem;
-        }
-
-        &__p{
-            
-            font-size: 1.4rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: $color-font-white;
-            margin-bottom: 1rem;
-            
-        }
-
-        &__pagination{
-            text-align: left;
-            bottom: 0;
-            display: flex;
-            align-items: center;
-        }
+        gap: 1em; 
+        align-items: center;
+        min-height: 215px;
+        padding: 2em;
     }
 }
 
-.swiper-pagination{
+.card{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        color: $color-font-white;
     
-    bottom: 0;
-}
-.swiper-pagination-bullet {
-    background-color: $color-font-white;
-    width: 15px;
-    height: 15px;
-    
-}
+        &--img{
+            width: 165px;
+            height: 100%;
+            border:  2px  solid $color-btn-main;
+            border-radius: 50%;
+        }
+    }
 
-.swiper-pagination-bullet-active {
-    background-color: $color-font-yellow;
-    width: 20px;
-    height: 20px;
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__h5{
+        font-size: 2.5rem;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    &__span{
+        font-size: 4.0rem;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    &__h6{
+        font-size: 1.6rem;
+        line-height: 1.2;
+        font-weight: 700;
+    }
 }
