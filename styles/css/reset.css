@@ -6,4 +6,12 @@
 
 html {
   font-size: 10px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Dancing Script", cursive;
+}
+
+p, span, button {
+  font-family: "Open Sans", sans-serif;
 }/*# sourceMappingURL=reset.css.map */

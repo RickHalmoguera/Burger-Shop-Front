@@ -9,6 +9,14 @@ html {
   font-size: 10px;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Dancing Script", cursive;
+}
+
+p, span, button {
+  font-family: "Open Sans", sans-serif;
+}
+
 .nav {
   padding: 1em;
   width: 100%;
@@ -56,6 +64,15 @@ html {
   color: #ffffff;
 }
 
+.button {
+  padding: 0.5em 1em;
+  background-color: #ffbe33;
+  border: none;
+  border-radius: 45px;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
 .section-hero {
   padding: 1em;
   width: 100%;
@@ -78,14 +95,12 @@ html {
   height: 30%;
 }
 .section-hero__swiper__h1 {
-  font-family: "Dancing Script", cursive;
   font-size: 5.6rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 1.3rem;
 }
 .section-hero__swiper__p {
-  font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.5;

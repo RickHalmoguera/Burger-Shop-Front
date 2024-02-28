@@ -3,6 +3,7 @@
 @import "reset.scss";
 @import "variables.scss";
 @import "nav.scss";
+@import "button.scss";
 
 
 .section-hero{
@@ -28,7 +29,6 @@
 
         }
         &__h1{
-            font-family: $font-heading;
             font-size: 5.6rem;
             font-weight: 700;
             color: $color-font-white;
@@ -36,7 +36,7 @@
         }
 
         &__p{
-            font-family: $font-text;
+            
             font-size: 1.4rem;
             font-weight: 400;
             line-height: 1.5;
