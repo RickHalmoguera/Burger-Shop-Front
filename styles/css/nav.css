@@ -1,0 +1,46 @@
+.nav {
+  padding: 1em;
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.2rem;
+  color: #ffffff;
+}
+.nav__icon {
+  font-size: 3.2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+.nav__icon--user {
+  display: none;
+}
+.nav__ul {
+  min-height: 200px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  list-style: none;
+  z-index: 99;
+}
+.nav__li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+}
+.nav__li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav__li a:visited {
+  color: #ffffff;
+}/*# sourceMappingURL=nav.css.map */

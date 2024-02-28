@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.nav {
+  padding: 1em;
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.2rem;
+  color: #ffffff;
+}
+.nav__icon {
+  font-size: 3.2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+.nav__icon--user {
+  display: none;
+}
+.nav__ul {
+  min-height: 200px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  list-style: none;
+  z-index: 99;
+}
+.nav__li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+}
+.nav__li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav__li a:visited {
+  color: #ffffff;
+}
+
+.section-hero {
+  padding: 1em;
+  width: 100%;
+  height: 100svh;
+  background-image: url("/images/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-hero__swiper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.section-hero__swiper__wrapper {
+  height: 30%;
+}
+.section-hero__swiper__h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 5.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.3rem;
+}
+.section-hero__swiper__p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.section-hero__swiper__pagination {
+  text-align: left;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-pagination {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff;
+  width: 15px;
+  height: 15px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffbe33;
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=styles.css.map */
