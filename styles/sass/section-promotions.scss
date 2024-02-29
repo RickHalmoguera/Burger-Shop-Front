@@ -1,0 +1,58 @@
+@import "variables.scss";
+
+.section-promotions{
+    @include section();
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    &__card{
+        background-color: $color-bg-main;
+        display: flex;
+        gap: 1em; 
+        align-items: center;
+        min-height: 215px;
+        padding: 2em;
+    }
+}
+
+.card{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        color: $color-font-white;
+    
+        &--img{
+            width: 165px;
+            height: 100%;
+            border:  2px  solid $color-btn-main;
+            border-radius: 50%;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__h5{
+        font-size: 2.5rem;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    &__span{
+        font-size: 4.0rem;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+
+    &__h6{
+        font-size: 1.6rem;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+}

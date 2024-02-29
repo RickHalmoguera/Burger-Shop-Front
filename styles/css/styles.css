@@ -73,9 +73,26 @@ p, button {
   color: #ffffff;
   font-size: 1.6rem;
 }
+.button--light {
+  width: 100px;
+  border: none;
+  outline: none;
+  padding: 0.5em 0.7em;
+  background-color: transparent;
+  border-radius: 45px;
+  font-size: 1.6rem;
+  color: #1f1f1f;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.active {
+  background-color: #222831;
+  color: #ffffff;
+}
 
 .section-hero {
-  padding: 1em;
+  padding: 4em 1em;
   width: 100%;
   height: 100svh;
   background-image: url("/images/hero-bg.jpg");
@@ -132,7 +149,7 @@ p, button {
 }
 
 .section-promotions {
-  padding: 1em;
+  padding: 4em 1em;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -178,4 +195,26 @@ p, button {
   font-size: 1.6rem;
   line-height: 1.2;
   font-weight: 700;
+}
+
+.section-menu {
+  padding: 4em 1em;
+}
+.section-menu__h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.section-menu__container--btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+}
+.section-menu__filter-card {
+  display: none;
+}
+
+.show {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
