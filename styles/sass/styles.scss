@@ -30,10 +30,13 @@
 
     &__input{
         height: 50px;
-        width: 100%;
+        width:100%;
         border: 1px solid $color-bg-main;
         border-radius: 5px;
         padding: 0 1em;
+        min-width: 100%;
+        -webkit-appearance: none;
+        
     }
 
     &__container{
@@ -41,7 +44,8 @@
     }
 
     &__img{
-        width: 100%;
+        
         object-fit: cover;
     }
 }
+

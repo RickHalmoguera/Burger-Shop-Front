@@ -320,11 +320,12 @@ p, button, h3, h4 {
   border: 1px solid #222831;
   border-radius: 5px;
   padding: 0 1em;
+  min-width: 100%;
+  -webkit-appearance: none;
 }
 .section-book__container {
   width: 100%;
 }
 .section-book__img {
-  width: 100%;
   object-fit: cover;
 }/*# sourceMappingURL=styles.css.map */
