@@ -148,55 +148,6 @@ p, button, h3, h4 {
   height: 20px;
 }
 
-.section-promotions {
-  padding: 4em 1em;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.section-promotions__card {
-  background-color: #222831;
-  display: flex;
-  gap: 1em;
-  align-items: center;
-  min-height: 215px;
-  padding: 2em;
-}
-
-.card__container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  color: #ffffff;
-}
-.card__container--img {
-  width: 165px;
-  height: 100%;
-  border: 2px solid #ffbe33;
-  border-radius: 50%;
-}
-.card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-.card__h5 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  font-weight: 700;
-}
-.card__span {
-  font-size: 4rem;
-  line-height: 1.2;
-  font-weight: 700;
-}
-.card__h6 {
-  font-size: 1.6rem;
-  line-height: 1.2;
-  font-weight: 700;
-}
-
 .section-menu {
   padding: 4em 1em;
 }
@@ -262,4 +213,87 @@ p, button, h3, h4 {
 
 .show {
   display: block;
+}
+
+.section-promotions {
+  padding: 4em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.section-promotions__card {
+  background-color: #222831;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  min-height: 215px;
+  padding: 2em;
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  color: #ffffff;
+}
+.card__container--img {
+  width: 165px;
+  height: 100%;
+  border: 2px solid #ffbe33;
+  border-radius: 50%;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card__h5 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.card__span {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.card__h6 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.section-about {
+  background-color: #222831;
+  padding: 10em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+.section-about__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+  order: 1;
+}
+.section-about__img-container {
+  width: 100%;
+  order: 2;
+}
+.section-about__img {
+  width: 100%;
+}
+.section-about__h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+}
+.section-about__p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */
