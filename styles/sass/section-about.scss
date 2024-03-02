@@ -5,9 +5,13 @@
 .section-about{
     background-color: $color-bg-main;
     padding: 10em 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
+    min-height: 100svh;
+   
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
 
     &__text-container{
         display: flex;
@@ -23,6 +27,7 @@
     }
 
     &__img{
+        max-height: 50%;
         width: 100%;
     }
 
@@ -39,4 +44,28 @@
         line-height: 1.5;
         color: $color-font-white;
     }
+}
+
+@media screen and (min-width: 1000px) {
+
+   .section-about{
+
+    &__container{
+        max-width: 1140px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    &__text-container{
+        max-width: 555px;
+        order: 2;
+    }
+
+    &__img-container{
+        order: 1;
+    }
+
+   }
 }
