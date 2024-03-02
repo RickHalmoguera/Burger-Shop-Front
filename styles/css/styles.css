@@ -137,6 +137,7 @@ p, button, h3, h4 {
   margin-bottom: 1.3rem;
 }
 .section-hero__swiper__p {
+  max-width: 555px;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.5;
@@ -166,6 +167,11 @@ p, button, h3, h4 {
   height: 20px;
 }
 
+@media screen and (min-width: 1000px) {
+  .section-hero__swiper {
+    max-width: 1040px;
+  }
+}
 .section-menu {
   padding: 4em 1em;
 }
