@@ -9,6 +9,7 @@ const pastaBtn = document.getElementById("pasta-btn")
 const friesBtn = document.getElementById("fries-btn")
 const btnContainer = document.getElementById("btn-container")
 const filterBtns = btnContainer.getElementsByClassName("button--light")
+const formBook = document.getElementById("form-book")
 
 let isMenuOpen = false
 
@@ -31,7 +32,11 @@ const heroSwiper = new Swiper(".section-hero__swiper", {
     pagination: {
       el: ".swiper-pagination",
     },
-    loop : true
+    loop : true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
 })
 
 
@@ -66,13 +71,39 @@ function CardRemoveClass(card, name) {
 }
 
 for (let i = 0; i < filterBtns.length; i++) {
-  filterBtns[i].addEventListener("click", function(){
+  filterBtns[i].addEventListener("click", ()=>{
     let current = document.getElementsByClassName("active")
     current[0].className = current[0].className.replace(" active", "")
     this.className += " active"
   });
 }
+
+ const validateForm= (e)=> {
+  e.preventDefault()
+  console.log("entro")
+  const inputs = document.querySelectorAll('.section-book__input')
+  const personsSelect = document.querySelector('select[name="persons"]')
+  console.log(personsSelect.value)
+  
+  for (let i = 0; i < inputs.length; i++) {
+      if (!inputs[i].value) {
+          alert('Please fill in all fields.')
+          return false;
+      }
+  }
+  
+  if (personsSelect.value == "How many persons?") {
+      alert('Please select a number between 1 and 6 for persons.')
+      return false
+  }
+  
+  return true
+}
+
+
+
 filterSelection("all")
+formBook.addEventListener("submit", validateForm)
 allBtn.addEventListener("click",()=> filterSelection("all"))
 burgerBtn.addEventListener("click",()=> filterSelection("burger"))
 pizzaBtn.addEventListener("click",()=> filterSelection("pizza"))

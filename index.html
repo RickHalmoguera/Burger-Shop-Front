@@ -249,12 +249,12 @@
     <section class="section-book">
         <div class="section-book-container">
             <h2 class="section-book__h2">Book A Table</h2>
-            <form action="" class="section-book__form">
-                <input name="full_name" type="text" class="section-book__input" placeholder="Your Name">
-                <input name="phone" type="text" class="section-book__input" placeholder="Phone Number">
-                <input name="email" type="email" class="section-book__input" placeholder="Your Email">
-                <select name="persons" id="" class="section-book__input" placeholder="How many persons?">
-                    <option value="How many persons?">How many persons?</option>
+            <form action="" class="section-book__form" id="form-book">
+                <input name="full_name" type="text" class="section-book__input" placeholder="Your Name " required >
+                <input name="phone" type="text" class="section-book__input" placeholder="Phone Number" required >
+                <input name="email" type="email" class="section-book__input" placeholder="Your Email" required >
+                <select name="persons" id="" class="section-book__input" required >
+                    <option value="How many persons?" disabled selected>How many persons?</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -263,7 +263,7 @@
                     <option value="6">6</option>
                 </select>
                 <input type="date" class="section-book__input">
-                <input type="submit" value="BOOK NOW" class="button">
+                <input type="submit" value="BOOK NOW" class="button" id="submit-btn">
             </form>
         </div>
         <div class="section-book-container">
