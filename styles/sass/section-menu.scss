@@ -3,6 +3,9 @@
 
 .section-menu{
     @include section();
+    max-width: 1140px;
+    margin: 0 auto;
+    
     &__h2{
        
         font-size: 4.0rem;

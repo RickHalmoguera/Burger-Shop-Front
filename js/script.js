@@ -71,7 +71,7 @@ function CardRemoveClass(card, name) {
 }
 
 for (let i = 0; i < filterBtns.length; i++) {
-  filterBtns[i].addEventListener("click", ()=>{
+  filterBtns[i].addEventListener("click", function(){
     let current = document.getElementsByClassName("active")
     current[0].className = current[0].className.replace(" active", "")
     this.className += " active"
