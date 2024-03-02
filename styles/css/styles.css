@@ -242,11 +242,13 @@ p, button, h3, h4 {
 .section-promotions {
   padding: 4em 1em;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1em;
 }
 .section-promotions__card {
   background-color: #222831;
+  width: 550px;
   display: flex;
   gap: 1em;
   align-items: center;
@@ -288,6 +290,24 @@ p, button, h3, h4 {
   font-weight: 700;
 }
 
+@media screen and (min-width: 1000px) {
+  .nav {
+    max-width: 1040px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .nav__ul--desktop {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .nav__icon--menu {
+    display: none;
+  }
+  .nav__icon--user {
+    display: block;
+  }
+}
 .section-about {
   background-color: #222831;
   padding: 10em 1em;
