@@ -22,7 +22,7 @@ p, button, h3, h4 {
   width: 100%;
   position: fixed;
   z-index: 9;
-  background-image: url("/images/menu-bg.jpg");
+  background-color: #222831;
 }
 .nav__container {
   display: flex;
@@ -327,5 +327,46 @@ p, button, h3, h4 {
   width: 100%;
 }
 .section-book__img {
+  width: 100%;
   object-fit: cover;
+}
+
+.footer {
+  padding: 4em 1em;
+  background-color: #222831;
+  color: #ffffff;
+  width: 100%;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+.footer__card {
+  margin-bottom: 3em;
+  text-align: center;
+}
+.footer__a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer__a:visited {
+  color: #ffffff;
+}
+.footer__h5 {
+  font-size: 2.8rem;
+  margin-bottom: 1em;
+}
+.footer i {
+  font-size: 1.6rem;
+  margin-top: 1em;
+  margin-right: 0.5em;
+}
+.footer__p {
+  font-size: 1.6rem;
+  display: inline-block;
+  line-height: 1.5;
+}
+.footer__bottom-container {
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */

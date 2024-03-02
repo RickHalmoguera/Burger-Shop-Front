@@ -3,7 +3,7 @@
   width: 100%;
   position: fixed;
   z-index: 9;
-  background-image: url("/images/menu-bg.jpg");
+  background-color: #222831;
 }
 .nav__container {
   display: flex;
