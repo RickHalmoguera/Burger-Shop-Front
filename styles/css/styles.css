@@ -451,4 +451,22 @@ p, button, h3, h4 {
 }
 .footer__bottom-container {
   text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+  }
+  .footer__top-container {
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+  .footer__card {
+    min-width: 360px;
+  }
 }/*# sourceMappingURL=styles.css.map */

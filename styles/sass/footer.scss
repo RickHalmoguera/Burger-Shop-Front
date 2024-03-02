@@ -53,3 +53,25 @@
     }
     
 }
+
+
+@media screen and (min-width: 1000px) {
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+       
+        &__top-container{
+            margin: 0 auto;
+            max-width: 1140px;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+
+        &__card{
+            min-width: 360px;
+        }
+    }
+}
