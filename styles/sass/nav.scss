@@ -71,6 +71,10 @@
             flex-direction: row;
         }
 
+        &__ul{
+            display: none;
+        }
+
         &__icon--menu{
             display: none;
         }

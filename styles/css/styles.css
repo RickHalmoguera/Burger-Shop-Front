@@ -76,6 +76,9 @@ p, button, h3, h4 {
     display: flex;
     flex-direction: row;
   }
+  .nav__ul {
+    display: none;
+  }
   .nav__icon--menu {
     display: none;
   }
