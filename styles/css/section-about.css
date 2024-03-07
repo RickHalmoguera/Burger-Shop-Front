@@ -1,7 +1,6 @@
 .section-about {
   background-color: #222831;
   padding: 10em 1em;
-  min-height: 100svh;
 }
 .section-about__container {
   display: flex;

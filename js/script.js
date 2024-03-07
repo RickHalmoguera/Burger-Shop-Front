@@ -10,9 +10,13 @@ const friesBtn = document.getElementById("fries-btn")
 const btnContainer = document.getElementById("btn-container")
 const filterBtns = btnContainer.getElementsByClassName("button--light")
 const formBook = document.getElementById("form-book")
+const containerForm1= document.getElementById("container-form-1")
+const containerForm2= document.getElementById("container-form-2")
+const buttonsContainer = document.getElementById("buttons-container")
+
 
 let isMenuOpen = false
-
+let reservation = {}
 const handleMenu = ()=>{
     if(isMenuOpen == false){
         navUl.style.display = "flex"
@@ -78,12 +82,17 @@ for (let i = 0; i < filterBtns.length; i++) {
   });
 }
 
- const validateForm= (e)=> {
+const processForm = async(e)=>{
   e.preventDefault()
-  console.log("entro")
+  const validatedInputs = await validateForm()
+  await reservationBody(validatedInputs)
+  const availableHours = await fetchHours(reservation.date, reservation.persons)
+  await generateBtns(availableHours)
+}
+
+ const validateForm= async()=> {
   const inputs = document.querySelectorAll('.section-book__input')
   const personsSelect = document.querySelector('select[name="persons"]')
-  console.log(personsSelect.value)
   
   for (let i = 0; i < inputs.length; i++) {
       if (!inputs[i].value) {
@@ -96,14 +105,61 @@ for (let i = 0; i < filterBtns.length; i++) {
       alert('Please select a number between 1 and 6 for persons.')
       return false
   }
+  containerForm1.style.display="none"
+  containerForm2.style.display="flex"
+  return inputs
+}
+
+
+const fetchHours = async (date, persons) => {
+  const requestBody = { "date": date, "persons": persons }
+  console.log(JSON.stringify(requestBody))
+  const response = await fetch("http://127.0.0.1:3000/api/availability", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(requestBody)
+  })
+
+  const responseData = await response.json()
+  return (responseData)
+}
+
+const generateBtns = async({availableHours})=>{
   
-  return true
+  for (let i = 0; i< availableHours.length; i++){
+    const button = document.createElement('button')
+    button.className = 'button button--hour'
+    button.textContent= availableHours[i].hour
+    console.log(availableHours[i].hour)
+    buttonsContainer.appendChild(button)
+
+    button.addEventListener('click', function(e) {
+      e.preventDefault()
+      const hour = this.textContent
+      console.log('Clicked hour:', hour)
+     
+  });
+  }
 }
 
 
 
+const reservationBody = async(inputs)=>{
+
+  reservation ={
+    "full_name" : inputs[0].value,
+    "phone": inputs[1].value,
+    "email": inputs[2].value,
+    "persons": inputs[3].value,
+    "date": inputs[4].value
+  }
+}
+
+
 filterSelection("all")
-formBook.addEventListener("submit", validateForm)
+formBook.addEventListener("submit", processForm)
 allBtn.addEventListener("click",()=> filterSelection("all"))
 burgerBtn.addEventListener("click",()=> filterSelection("burger"))
 pizzaBtn.addEventListener("click",()=> filterSelection("pizza"))
